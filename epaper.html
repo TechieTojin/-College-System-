@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspapers Showcase</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "BBC Reith Serif", Helvetica, Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: rgb(157, 149, 149);
+            background-image: url('https://media4.giphy.com/media/5QP7K7HaZSCKYGNoTy/giphy.gif?cid=6c09b952b4ly1vn74prj131b2hmm6c9wd458uz20ucd64wss&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s');
+            background-repeat: no-repeat;
+            background-attachment: fit;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .newspapers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .newspaper {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            text-align: center;
+            padding: 20px;
+            flex: 1 1 200px;
+        }
+
+        .newspaper img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .newspaper a {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #343a40;
+            text-decoration: none;
+        }
+
+        .newspaper a:hover {
+            color: purple;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            background-color: #343a40;
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <button class="back-button" onclick="window.location.href='news.html';">
+                <i class="fa fa-arrow-left"></i> Back
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1></h1>
+            <p></p>
+        </div>
+    </section>
+
+    <main>
+        <div class="newspapers">
+            <div class="newspaper hindustantimes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FQULJrEg-BcVntspvL3PEYJ3HrM3pjPB6Er2orPQoxTBlpHuNT7771tPDk1LzDrcj5w&usqp=CAU" alt="Hindustan Times">
+                <a href="https://www.hindustantimes.com/">Hindustan Times</a>
+            </div>
+            <div class="newspaper thehindu">
+                <img src="https://india.mom-gmr.org/uploads/tx_lfrogmom/media/16509-1592_import.png" alt="The Hindu">
+                <a href="https://www.thehindu.com/">The Hindu</a>
+            </div>
+            <div class="newspaper timesofindia">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTimihkM52sRC5skzswhgSKN1DhcibeKtl7BLl4kSxdsCglhdHn8il9v1XmX5eAk_YZxmI&usqp=CAU" alt="The Times of India">
+                <a href="https://timesofindia.indiatimes.com/">The Times of India</a>
+            </div>
+            <div class="newspaper twentyfour">
+                <img src="https://www.twentyfournews.com/wp-content/uploads/2019/11/24-logo-HD.jpg" alt="Deccan Herald">
+                <a href="https://www.twentyfournews.com/">TwentyFour News</a>
+            </div>
+            <div class="newspaper mathrubhumi">
+                <img src="https://www.adgully.com/img/800/201904/mathrubhumi_2.jpg" alt="Mathrubhumi">
+                <a href="https://newspaper.mathrubhumi.com/">Mathrubhumi</a>
+            </div>
+            <div class="newspaper asianet">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7c5fa4158569787.638e3dba74607.png" alt="Asianet News">
+                <a href="https://www.asianetnews.com/">Asianet News</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 News Elevate Academy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

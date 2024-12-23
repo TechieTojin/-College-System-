@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import ImageFetcher from './ImageFetcher';
+import Login from './Login';
 
-function App() {
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userInfo, setUserInfo] = useState({ username: '', password: '' });
+
+  const handleLogin = (username, password) => {
+    setUserInfo({ username, password });
+    setIsLoggedIn(true);
+    console.log('Username:', username);
+    console.log('Password:', password);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center' }}>
+      <h1>College Image Fetcher</h1>
+      {!isLoggedIn ? (
+        <Login onLogin={handleLogin} />
+      ) : (
+        <div>
+          <h2>Welcome, {userInfo.username}!</h2>
+          <ImageFetcher />
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;

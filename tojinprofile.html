@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tojin Varkey - Elevate Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .profile-header {
+            background: linear-gradient(to right, #aaadb1, #aaadb1);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            margin-top: -75px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-header h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .profile-header p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #007bff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .info-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .info-box img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-box img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            font-size: 0.875rem;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .info-container {
+                flex-direction: column;
+            }
+
+            .card-box {
+                flex-direction: column;
+            }
+
+            .card {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Elevate Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profiles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <img src="https://cdn.dribbble.com/users/2383753/screenshots/6725068/scen_6.gif" alt="Tojin Varkey">
+            <h1>Tojin Varkey Simson</h1>
+            <p>Founder & CEO</p>
+        </section>
+
+        <!-- Profile Content -->
+        <section class="container">
+            <div class="section-title">About Tojin Varkey</div>
+            <div class="info-container">
+                <div class="info-box">
+                    <img src="https://img.freepik.com/free-vector/laurel-wreaths-symbol-victory-glory-success_91128-1353.jpg" alt="Tojin's Achievement">
+                    <h3>Achievements</h3>
+                    <p><b>Visionary Leadership:</b> As CEO of Elevate Academy, Tojin Varkey has transformed the educational landscape through his forward-thinking approach.
+
+                      <b>Innovative Impact:</b> He has introduced groundbreaking educational strategies that have set new benchmarks in the industry.
+                      
+                      <b>Awards and Recognition:</b> Tojin Varkey has been honored with numerous awards for his outstanding contributions to education and innovation.
+                      
+                      <b>Educational Reforms:</b> Under his leadership, Elevate Academy has implemented significant educational reforms, enhancing learning outcomes for students.
+                      
+                      <b>Global Influence:</b> His work has had a global impact, inspiring educational institutions worldwide to adopt innovative practices.
+                      
+                      <b>Commitment to Excellence:</b> The CEO’s unwavering commitment to excellence continues to drive Elevate Academy towards new heights in education</p>
+                </div>
+                <div class="info-box">
+                    <img src="https://img.freepik.com/premium-vector/flash-student-vector-logo-template-education-logo-with-graduation-cap-thunder-icon_617472-603.jpg" alt="Tojin's Education">
+                    <h3>Educational Background</h3>
+                    <p><b>Academic Foundation:</b> Tojin Varkey built a solid foundation in education, earning degrees that equipped him with deep knowledge and skills.
+
+                      <b>Advanced Studies:</b> He pursued advanced studies in education and management, honing his expertise in leading academic institutions.
+                      
+                      <b>Specializations:</b> The CEO specialized in areas such as educational technology and leadership, contributing to his innovative approach.
+                      
+                      <b>Global Exposure:</b> Tojin Varkey’s educational journey includes learning experiences from top institutions around the world.
+                      
+                      <b>Lifelong Learner:</b> He embodies the principle of lifelong learning, continually updating his knowledge to stay at the forefront of educational advancements.
+                      
+                      <b>Influence of Mentors:</b> His educational path was shaped by influential mentors who guided his passion for teaching and innovation.
+                      
+                      <b>Academic Achievements:</b> Tojin Varkey received numerous accolades throughout his academic career, reflecting his dedication and excellence..</p>
+                </div>
+                <div class="info-box">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/664/656/small/business-concept-illustration-with-businessman-looking-at-the-mountain-vector.jpg" alt="Tojin's Journey">
+                    <h3>Professional Journey</h3>
+                    <p><b>Early Career:</b> Tojin Varkey began his professional journey in the education sector, quickly establishing himself as a dynamic educator and leader.
+
+                      <b>Leadership Roles:</b> Rising through the ranks, he assumed various leadership roles, where he implemented transformative educational practices.
+                      
+                      <b>Innovative Initiatives:</b> The CEO spearheaded numerous initiatives that integrated technology into the learning environment, setting new standards in education.
+                      
+                      <b>Founding Elevate Academy:</b> Driven by a passion for innovation, Tojin Varkey founded Elevate Academy, a premier institution focused on redefining education.
+                      
+                      <b>Global Collaborations:</b> He forged partnerships with international organizations, bringing global perspectives and resources to the academy.
+                      
+                      <b>Award-Winning Educator:</b> His contributions to education have been recognized with multiple awards, highlighting his impact on the field.
+                      
+                      <b>Strategic Visionary:</b> As a strategic visionary, Tojin Varkey has continuously steered Elevate Academy towards excellence, ensuring it remains a leader in education.
+                      
+                      <b>Mentorship and Guidance:</b> Throughout his journey, he has mentored countless educators, inspiring them to innovate and excel in their careers.
+                      
+                      <b>Public Speaking and Advocacy:</b> The CEO is also a sought-after speaker and advocate for educational reform, sharing his insights at various conferences and forums.
+                      
+                      <b>Commitment to Excellence:</b> His professional journey reflects an unwavering commitment to excellence, with a focus on creating impactful and sustainable educational solutions.</p>
+                </div>
+            </div>
+
+            <div class="section-title">Vision & Mission</div>
+            <div class="info-container">
+                <div class="info-box">
+                    <h3>Vision</h3>
+                    <p>Tojin Varkey's vision for Elevate Academy is to transform education by creating a global institution that prioritizes innovation-driven learning and empowers educators to inspire future leaders. His vision centers on a student-centric approach, fostering personalized learning experiences that cater to individual needs and potentials. He aims to build a sustainable educational model that adapts to societal changes while maintaining excellence, promoting lifelong learning, and encouraging strong community engagement. Central to his vision are the principles of diversity and inclusion, ensuring that Elevate Academy remains a place where all students have equal opportunities to excel..</p>
+                </div>
+                <div class="info-box">
+                    <h3>Mission</h3>
+                    <p>Tojin Varkey's mission for Elevate Academy is to provide an exceptional and forward-thinking educational experience that equips students with the knowledge, skills, and values necessary for success in a rapidly evolving world. The mission focuses on fostering a dynamic learning environment that blends academic rigor with real-world applications, encourages critical thinking, and promotes holistic development. By leveraging cutting-edge technology and innovative teaching methods, Elevate Academy aims to inspire curiosity, nurture talent, and prepare students to be leaders and change-makers in their communities and beyond..</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Links -->
+        <section class="card-box">
+            <div class="card" onclick="window.location.href='home.html';">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h4>Home</h4>
+                <p>Return to the homepage.</p>
+            </div>
+            <div class="card" onclick="window.location.href='map.html';">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <h4>Location</h4>
+                <p>Find our location on the map.</p>
+            </div>
+            <div class="card" onclick="window.location.href='contactus.html';">
+                <i class="fa-solid fa-envelope"></i>
+                <h4>Contact Us</h4>
+                <p>Get in touch with us.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Elevate Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
